@@ -7,19 +7,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Curiculum Vitae</title>
 </head>
 <body>
     <!-- HEADER -->
     <header class="header">
-        <h1 class="header__title"><span>cv</span> / <span>portfolio</span></h1>
+        <h1 class="header__title"><span>Uzun</span> <span>Ion</span></h1>
         <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <div id="burger" class="header__nav-burger">
+                <div></div>
+            </div>
+            <ul id="menu" class="header__nav-list">
+                <li><a class="header__nav-link" href="#about">About</a></li>
+                <li><a class="header__nav-link" href="#skills">Skills</a></li>
+                <li><a class="header__nav-link" href="#experience">Experience</a></li>
+                <li><a class="header__nav-link" href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -39,7 +43,7 @@
             <!-- /ABOUT -->
 
             <!-- CONTACT -->
-        <div class="container">
+        <div class="outer">
             <section id="contact" class="main__contact">
                 <h2 class="main__contact-title">contact</h2>
                 <address class="main__contact-address">
@@ -63,7 +67,7 @@
                         viewBox="0 0 48 48"
                         style=" fill:#000000;"><path d="M 45.273438 2.324219 C 45.085938 2.117188 44.816406 2 44.535156 2 L 5.464844 2 C 5.183594 2 4.914063 2.117188 4.726563 2.324219 C 4.535156 2.53125 4.441406 2.808594 4.46875 3.089844 L 7.988281 42.515625 C 8.023438 42.929688 8.3125 43.273438 8.710938 43.390625 L 24.722656 47.960938 C 24.808594 47.988281 24.902344 48 24.996094 48 C 25.089844 48 25.179688 47.988281 25.269531 47.960938 L 41.292969 43.390625 C 41.691406 43.273438 41.976563 42.929688 42.015625 42.515625 L 45.53125 3.089844 C 45.558594 2.808594 45.464844 2.53125 45.273438 2.324219 Z M 36.847656 15.917969 L 18.035156 15.917969 L 18.484375 21.007813 L 36.394531 21.007813 L 35.050781 36.050781 L 24.992188 39.089844 L 24.894531 39.058594 L 14.953125 36.046875 L 14.410156 29.917969 L 19.28125 29.917969 L 19.492188 32.296875 L 25.050781 33.460938 L 30.507813 32.296875 L 31.089844 25.859375 L 14.046875 25.859375 L 12.722656 11.054688 L 37.28125 11.054688 Z"></path></svg>
                         
-                        HTML
+                        <span>HTML</span> 
                         <progress value="85" max="100"> 85% </progress>
                     </li>
                     <li class="main__skills-item">
@@ -71,34 +75,34 @@
                         width="25" height="25"
                         viewBox="0 0 48 48"
                         style=" fill:#000000;"><path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path><path fill="#039BE5" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path><path fill="#FFF" d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z"></path><path fill="#EEE" d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z"></path></svg>
-                        CSS <progress value="85" max="100"> 85% </progress>
+                        <span>CSS</span>  <progress value="85" max="100"> 85% </progress>
                     </li>
                     <li class="main__skills-item">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                         width="25" height="25"
                         viewBox="0 0 48 48"
                         style=" fill:#000000;"><path fill="#ffd600" d="M6,42V6h36v36H6z"></path><path fill="none" stroke="#000001" stroke-miterlimit="10" stroke-width="3.3" d="M23.783,22.352v9.819 c0,3.764-4.38,4.022-6.283,0.802"></path><path fill="none" stroke="#000001" stroke-miterlimit="10" stroke-width="3.3" d="M34.69,25.343 c-1.739-2.727-5.674-2.345-5.84,0.558c-0.214,3.757,6.768,2.938,6.247,7.107c-0.365,2.92-4.874,3.858-7.193-0.065"></path></svg>
-                        JavaScript <progress value="45" max="100"> 45% </progress>
+                        <span>JavaScript</span>  <progress value="45" max="100"> 45% </progress>
                     </li>
                     <li class="main__skills-item">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                         width="25" height="25"
                         viewBox="0 0 80 80"
                         style=" fill:#000000;"><path fill="#dcd5f2" d="M40,61.5C18.22,61.5,0.5,51.855,0.5,40S18.22,18.5,40,18.5S79.5,28.145,79.5,40S61.78,61.5,40,61.5z"></path><path fill="#8b75a1" d="M40,19c21.505,0,39,9.421,39,21S61.505,61,40,61S1,51.579,1,40S18.495,19,40,19 M40,18 C17.909,18,0,27.85,0,40s17.909,22,40,22s40-9.85,40-22S62.091,18,40,18L40,18z"></path><path fill="#36404d" d="M25.112 34c1.725 0 3.214.622 4.084 1.706.749.934.981 2.171.668 3.577C29.023 43.074 27.395 44 21.57 44h-4.14l1.75-10H25.112M25.112 32H17.5L14 52h2l1.056-6h4.515c5.863 0 9.053-.905 10.246-6.284C32.842 35.096 29.436 32 25.112 32L25.112 32zM61.112 34c1.725 0 3.214.622 4.084 1.706.749.934.981 2.171.668 3.577C65.023 43.074 63.395 44 57.57 44h-4.14l1.75-10H61.112M61.112 32H53.5L50 52h2l1.056-6h4.515c5.863 0 9.053-.905 10.246-6.284C68.842 35.096 65.436 32 61.112 32L61.112 32z"></path><g><path fill="#36404d" d="M49.072,33.212C48.193,32.348,46.644,32,44.334,32h-5.538L40,26h-2.1L34,46h1.99l2.388-12h0.419 h5.538c2.338,0,3.094,0.4,3.335,0.637c0.343,0.338,0.424,1.226,0.217,2.363l-1.767,9h2.106l1.626-8.63 C50.199,35.462,49.936,34.062,49.072,33.212z"></path></g></svg>
-                        PHP <progress value="0" max="100"> 0% </progress>
+                        <span>PHP</span> <progress value="0" max="100"> 0% </progress>
                     </li>
                     <li class="main__skills-item">
                         <svg xmlns="http://www.w3.org/2000/svg" 
                         width="20" height="20" 
                         preserveAspectRatio="xMinYMin meet" viewBox="0 0 256 256"><g fill="#F35045"><path d="M160.445 208c2 2.889 3.222 2.667 4.777 2 1.555-.667 81.556-27.667 84-28.555 2.444-.889 1.667-1.667.89-2.89-.778-1.222-27.445-37.444-28.779-39.555-1.333-2.111-2-1.667-4.111-1l-84.805 22.067S158.445 205.11 160.445 208zM256 171.115v-42.398c-9.541 2.542-21.609 5.756-26.373 7.023 7.187 9.616 18.423 24.665 26.373 35.375zM229.545 83.521c-1.307.297-30.247 5.527-32.03 5.764-1.782.238-1.188 1.248-.475 2.258l25.467 34.943s31.139-7.725 33.041-8.141c.154-.034.305-.07.452-.107v-4.627c-5.66-7.177-21.08-26.718-22.413-28.544-1.604-2.199-2.734-1.842-4.042-1.546z"/><path d="M47.456 28.634c6.267-.285 6.839 1.141 9.592 5.224l69.17 115.642 86.974-20.835c-4.819-6.831-26.695-37.846-28.81-40.806-2.376-3.328.06-4.873 3.923-5.526 3.862-.654 37.14-6.24 39.992-6.656 2.853-.416 5.112-1.426 9.746 4.16 2.372 2.858 10.412 12.87 17.957 22.255V48c0-13.222-4.695-24.528-14.083-33.917C232.528 4.695 221.222 0 208 0H48C34.778 0 23.472 4.695 14.083 14.083 8.698 19.47 4.865 25.487 2.57 32.134c15.678-1.288 40.501-3.3 44.887-3.5z"/><path d="M168.289 223.564c-7.334 2.222-10.623 3.325-15.4-3.342-3.578-4.993-22.927-39.843-32.414-57.023-17.955 4.702-50.814 13.278-60.29 15.555-9.248 2.222-13.198-3.323-14.717-6.74C44.403 169.616 17.289 111.158 0 73.65V208c0 13.223 4.695 24.527 14.083 33.917C23.472 251.305 34.778 256 48 256h160c13.222 0 24.528-4.695 33.917-14.083C251.305 232.527 256 221.223 256 208v-15.781c-19.64 7.184-82.77 29.848-87.711 31.345z"/><path d="M60.412 165.288c2.6-.595 51.313-12.253 52.353-12.476 1.04-.223 1.708-.817.594-2.747-1.114-1.93-64.934-112.09-64.934-112.09-.589-1.011-.421-1.348-2.022-1.264-1.427.076-37.538 3.298-45.898 3.996a51.038 51.038 0 0 0-.461 5.331c8.487 17.375 57.199 117.837 57.472 118.655.297.892.297 1.189 2.896.595z"/></g></svg>
-                        Laravel <progress value="0" max="100"> 0% </progress>
+                        <span>Laravel</span> <progress value="0" max="100"> 0% </progress>
                     </li>
                     <li class="main__skills-item">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                         width="25" height="25"
                         viewBox="0 0 48 48"
                         style=" fill:#000000;"><path fill="#673ab7" d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5 V37z"></path><path fill="#fff" d="M33.03,25.6c-0.65-0.9-1.59-1.52-2.8-1.85c0,0,1.02-0.37,1.94-1.75c0.55-0.88,0.83-1.94,0.83-3.18 c0-2.15-0.78-3.8-2.34-4.93C29.1,12.76,27.34,12,24.35,12H15v24h10.43c2.83-0.02,4.96-0.63,6.41-1.8c1.44-1.19,2.16-2.95,2.16-5.3 C34,27.6,33.68,26.5,33.03,25.6z M21,16c0,0,4.17,0,4.25,0c1.52,0,2.75,1.23,2.75,2.75c0,1.52-1.23,2.75-2.75,2.75 c-0.08,0-4.25,0-4.25,0V16z M26,32h-5v-6h5c1.66,0,3,1.34,3,3C29,30.66,27.66,32,26,32z"></path></svg>
-                        Bootstrap <progress value="30" max="100"> 30% </progress>
+                        <span>Bootstrap</span> <progress value="30" max="100"> 30% </progress>
                     </li>
                 </ul>
             </section>
@@ -108,34 +112,90 @@
             <!-- EXPERIENCE -->
             <section id="experience" class="main__experience">
                 <h2 class="main__experience-title">experience</h2>
-                <table class="main__experience-table"> 
-                    <thead class="main__experience-thead">
-                        <tr class="main__experience-row">
-                            <th class="main__experience-item">Period</th>
-                            <th class="main__experience-item">Place</th>
-                            <th class="main__experience-item">Position/Description</th>
-                        </tr>
-                    </thead>
-                    <tbody class="main__experience-tbody">
-                        <tr class="main__experience-row">
-                            <td class="main__experience-item">2017-2018</td>
-                            <td class="main__experience-item"><strong>Blabla Corp.</strong></td>
-                            <td class="main__experience-item">Boss</td>
-                        </tr>
-                        <tr class="main__experience-row">
-                            <td class="main__experience-item">2015-2017</td>
-                            <td class="main__experience-item"><strong>Other job</strong></td>
-                            <td class="main__experience-item">
-                                <details>
-                                    <summary>Posistion Other job</summary>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, optio.</p>
-                                </details>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <table class="table caption-top  main__experience-table"> 
+                        <caption>My experience</caption>
+                        <thead class="main__experience-thead table-light">
+                            <tr class="main__experience-row">
+                                <th scope="col" class="main__experience-item">Period</th>
+                                <th scope="col" class="main__experience-item">Place</th>
+                                <th scope="col" class="main__experience-item">Position</th>
+                                <th scope="col" class="main__experience-item">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="main__experience-tbody">
+                            <tr class="main__experience-row">
+                                <td scope="row" class="main__experience-item">2017-2018</td>
+                                <td class="main__experience-item"><strong>Alo SRL</strong></td>
+                                <td class="main__experience-item">Vanzator-Consultant</td>
+                                <td class="main__experience-item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio vitae, quam a corrupti reprehenderit ducimus.</td>
+                            </tr>
+                            <tr class="main__experience-row">
+                                <td scope="row" class="main__experience-item">2019-2020</td>
+                                <td class="main__experience-item"><strong>Vanar SRL</strong></td>
+                                <td class="main__experience-item">Student</td>
+                                <td class="main__experience-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quia iste tempora officiis recusandae. Aliquid animi dolore repellat!</td>
+                            </tr>
+                            <tr class="main__experience-row">
+                                <td scope="row" class="main__experience-item">2019-2021</td>
+                                <td class="main__experience-item"><strong>PfB Legal Consulting</strong></td>
+                                <td class="main__experience-item">Operator</td>
+                                <td class="main__experience-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quia iste tempora officiis recusandae. Aliquid animi dolore repellat!</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </section>
         <!-- /EXPERIENCE -->
+            
+        <!-- CONTACT FORM -->
+            <section class="main__form">
+                <h2 class="main__form-title">contact me</h2>
+                <div class="container">
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col ">
+                            <div class="row gy-2 gx-2 align-items-center justify-content-center">
+                                <div class="form-floating">
+                                    <input type="name" class="form-control" id="floatingName" required placeholder="name">
+                                    <label for="floatingName">name</label>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                        
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="floatingInput" required placeholder="name@example.com">
+                                    <label for="floatingInput">email address</label>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row align-items-center gx-2 justify-content-center">
+                                <div class="form-floating mb-3">
+                                <textarea class="form-control" placeholder="write your message here" required id="floatingTextarea2" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2">write your message here</label>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="submit" id="liveToastBtn" class="btn">submit</button>
+                                </div>
+                                <div id="liveToast" class="toast position-fixed bottom-0 end-0 p-3" role="alert" aria-live="assertive" aria-atomic="true"   data-bs-animation="true">
+                                    <div class="d-flex">
+                                        <div class="toast-body">
+                                        Thank you for contacting me!
+                                        </div>
+                                        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        <!-- /CONTACT FORM -->
        
     </main>
 
@@ -143,5 +203,49 @@
     <footer class="footer">
         <b>Copyright</b> &copy; 2021, Dev
     </footer>
+
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+            })
+        })()
+
+        // Toast notification
+        let toastTrigger = document.getElementById('liveToastBtn')
+        let toastLive = document.getElementById('liveToast')
+        if (toastTrigger) {
+        toastTrigger.addEventListener('click', function () {
+            let toast = new bootstrap.Toast(toastLive)
+
+            toast.show()
+        })
+        }
+
+        // Hamburger
+        let toggleIcon = document.getElementById(`burger`);
+        let menu = document.getElementById(`menu`);
+
+        toggleIcon.addEventListener(`click`, () => { 
+            toggleIcon.classList.toggle(`active`);
+            menu.classList.toggle(`active`);
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
