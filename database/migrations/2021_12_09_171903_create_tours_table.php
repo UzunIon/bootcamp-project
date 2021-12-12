@@ -20,17 +20,14 @@ class CreateToursTable extends Migration
             $table->text('details');
 
             $table->foreignId('guest_house_id')
-            ->nullable()
             ->constrained()
             ->cascadeOnUpdate()
             ->restrictOnDelete();
             $table->foreignId('location_id')
-            ->nullable()
             ->constrained()
             ->cascadeOnUpdate()
             ->restrictOnDelete();
             $table->foreignId('sport_activity_id')
-            ->nullable()
             ->constrained()
             ->cascadeOnUpdate()
             ->restrictOnDelete();

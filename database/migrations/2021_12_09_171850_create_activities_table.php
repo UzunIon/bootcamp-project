@@ -16,7 +16,6 @@ class CreateActivitiesTable extends Migration
         Schema::create('activities', function (Blueprint $table) {
             $table->id();
             $table->foreignId('restaurant_id')
-            ->nullable()
             ->constrained()
             ->cascadeOnUpdate()
             ->restrictOnDelete();

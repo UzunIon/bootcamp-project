@@ -15,12 +15,10 @@ class CreateToursActivitiesTable extends Migration
     {
         Schema::create('tours_activities', function (Blueprint $table) {
             $table->foreignId('tour_id')
-            ->nullable()
             ->constrained()
             ->cascadeOnUpdate()
             ->cascadeOnDelete();
             $table->foreignId('activity_id')
-            ->nullable()
             ->constrained()
             ->cascadeOnUpdate()
             ->cascadeOnDelete();

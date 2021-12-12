@@ -19,12 +19,10 @@ class CreateOrdersTable extends Migration
             $table->integer('order_price');
 
             $table->foreignId('customer_id')
-            ->nullable()
             ->constrained()
             ->restrictOnUpdate()
             ->cascadeOnDelete();
             $table->foreignId('tour_id')
-            ->nullable()
             ->constrained()
             ->restrictOnUpdate()
             ->cascadeOnDelete();
