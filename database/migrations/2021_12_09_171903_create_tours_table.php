@@ -15,10 +15,6 @@ class CreateToursTable extends Migration
     {
         Schema::create('tours', function (Blueprint $table) {
             $table->id();
-            
-            $table->string('name', 50);
-            $table->text('details');
-
             $table->foreignId('guest_house_id')
             ->constrained()
             ->cascadeOnUpdate()
@@ -31,6 +27,10 @@ class CreateToursTable extends Migration
             ->constrained()
             ->cascadeOnUpdate()
             ->restrictOnDelete();
+            $table->string('name', 50);
+            $table->text('details');
+
+            
         });
     }
 

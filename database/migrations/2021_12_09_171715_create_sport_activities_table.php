@@ -20,7 +20,7 @@ class CreateSportActivitiesTable extends Migration
             $table->text('description');
             $table->date('active_from');
             $table->date('active_to');
-            $table->integer('price');
+            $table->decimal('price', 5, 2);
         });
     }
 

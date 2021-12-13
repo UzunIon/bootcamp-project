@@ -15,9 +15,6 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->timestamp('order_date')->useCurrent();
-            $table->integer('order_price');
-
             $table->foreignId('customer_id')
             ->constrained()
             ->restrictOnUpdate()
@@ -26,6 +23,8 @@ class CreateOrdersTable extends Migration
             ->constrained()
             ->restrictOnUpdate()
             ->cascadeOnDelete();
+            $table->timestamp('order_date')->useCurrent();
+            $table->decimal('order_price', 10, 2);
         });
     }
 

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AlterActivitiesTableDropDurationColumn extends Migration
+class AlterLocationsTableChangePriceDataType extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,10 @@ class AlterActivitiesTableDropDurationColumn extends Migration
      * @return void
      */
     public function up()
-        {
-        Schema::table('activities', function (Blueprint $table) {
-            $table->dropColumn('duration');
-        });        
+    {
+        Schema::table('locations', function (Blueprint $table) {
+            $table->decimal('price', 5,2);
+        });
     }
 
     /**
@@ -25,8 +25,8 @@ class AlterActivitiesTableDropDurationColumn extends Migration
      */
     public function down()
     {
-        Schema::create('activities', function (Blueprint $table) {
-            $table->time('duration');
-        });  
+        Schema::table('locations', function (Blueprint $table) {
+            $table->integer('price');
+        });
     }
 }

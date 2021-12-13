@@ -27,17 +27,6 @@ class CreateContactInfoTable extends Migration
                 ON UPDATE CASCADE
             ) ENGINE=InnoDB;
         ");
-
-        // Schema::create('contact_info', function (Blueprint $table) {
-        //     $table->foreignId('customer_id')
-        //     ->nullable()
-        //     ->constrained()
-        //     ->cascadeOnUpdate()
-        //     ->cascadeOnDelete();
-        //     $table->string('phone_number', 20);
-        //     $table->string('email', 50)->unique();
-
-        // });
     }
 
     /**

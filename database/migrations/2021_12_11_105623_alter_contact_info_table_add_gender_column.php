@@ -25,6 +25,8 @@ class AlterContactInfoTableAddGenderColumn extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contact_info');
+        Schema::table('contact_info', function (Blueprint $table) {
+            $table->dropColumn('gender');
+        });
     }
 }

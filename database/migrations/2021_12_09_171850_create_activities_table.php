@@ -19,9 +19,9 @@ class CreateActivitiesTable extends Migration
             ->constrained()
             ->cascadeOnUpdate()
             ->restrictOnDelete();
-            $table->string('activity_type', 30);
+            $table->string('type', 30);
             $table->text('description');
-            $table->integer('price');
+            $table->decimal('price', 5, 2);
             $table->time('duration');
         });
     }
