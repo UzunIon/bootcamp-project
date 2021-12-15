@@ -3,9 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Facades\DB;
 
-class CreateSportActivitiesTable extends Migration
+class CreateBlogCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,13 +13,13 @@ class CreateSportActivitiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('sport_activities', function (Blueprint $table) {
+        Schema::create('blog_categories', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 20);
+            $table->string('name', 30);
             $table->text('description');
-            $table->dateTime('active_from');
-            $table->dateTime('active_to');
-            $table->decimal('price', 5, 2);
+            $table->string('seo_title', 30);
+            $table->string('seo_description', 50);
+            $table->timestamps();
         });
     }
 
@@ -31,6 +30,6 @@ class CreateSportActivitiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sport_activities');
+        Schema::dropIfExists('blog_categories');
     }
 }

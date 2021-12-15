@@ -16,17 +16,17 @@ class CreateToursTable extends Migration
         Schema::create('tours', function (Blueprint $table) {
             $table->id();
             $table->foreignId('guest_house_id')
-            ->constrained()
-            ->cascadeOnUpdate()
-            ->restrictOnDelete();
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->restrictOnDelete();
             $table->foreignId('location_id')
-            ->constrained()
-            ->cascadeOnUpdate()
-            ->restrictOnDelete();
-            $table->foreignId('sport_activity_id')
-            ->constrained()
-            ->cascadeOnUpdate()
-            ->restrictOnDelete();
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->restrictOnDelete();
+            $table->foreignId('sport_activity_id')->nullable()
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->restrictOnDelete();
             $table->string('name', 50);
             $table->text('details');
 

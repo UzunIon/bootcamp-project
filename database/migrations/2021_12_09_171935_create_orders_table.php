@@ -16,14 +16,14 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->foreignId('customer_id')
-            ->constrained()
-            ->restrictOnUpdate()
-            ->cascadeOnDelete();
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
             $table->foreignId('tour_id')
-            ->constrained()
-            ->restrictOnUpdate()
-            ->cascadeOnDelete();
-            $table->timestamp('order_date')->useCurrent();
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->restrictOnDelete();
+            $table->dateTime('order_date')->useCurrent();
             $table->decimal('order_price', 10, 2);
         });
     }

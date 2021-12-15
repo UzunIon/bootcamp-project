@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AlterActivitiesTableDropDurationColumn extends Migration
+class CreateBlogTagsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,12 @@ class AlterActivitiesTableDropDurationColumn extends Migration
      * @return void
      */
     public function up()
-        {
-        Schema::table('activities', function (Blueprint $table) {
-            $table->dropColumn('duration');
-        });        
+    {
+        Schema::create('blog_tags', function (Blueprint $table) {
+            $table->id();
+            $table->string('name', 20);
+            $table->timestamps();
+        });
     }
 
     /**
@@ -25,6 +27,6 @@ class AlterActivitiesTableDropDurationColumn extends Migration
      */
     public function down()
     {
-        // 
+        Schema::dropIfExists('blog_tags');
     }
 }

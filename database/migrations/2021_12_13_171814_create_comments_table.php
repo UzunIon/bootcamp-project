@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AlterLocationsTableChangePriceDataType extends Migration
+class CreateCommentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class AlterLocationsTableChangePriceDataType extends Migration
      */
     public function up()
     {
-        Schema::table('locations', function (Blueprint $table) {
-            $table->decimal('price', 5,2)->change();
+        Schema::create('comments', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('article_id')->constrained();
+            $table->string('author_email', 50);
+            $table->text('message');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +29,6 @@ class AlterLocationsTableChangePriceDataType extends Migration
      */
     public function down()
     {
-        Schema::table('locations', function (Blueprint $table) {
-            $table->integer('price')->change();
-        });
+        Schema::dropIfExists('comments');
     }
 }

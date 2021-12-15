@@ -20,7 +20,6 @@ class CreateContactInfoTable extends Migration
                 `phone_number` VARCHAR(20) NOT NULL,
                 `email` VARCHAR(50) NOT NULL,
                 PRIMARY KEY (`customer_id`),
-                UNIQUE KEY (`customer_id`),
                 CONSTRAINT `fk_contact_info_customers`
                 FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`)
                 ON DELETE CASCADE
