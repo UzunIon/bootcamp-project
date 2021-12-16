@@ -18,8 +18,8 @@ class CreateSportActivitiesTable extends Migration
             $table->id();
             $table->string('name', 20);
             $table->text('description');
-            $table->dateTime('active_from');
-            $table->dateTime('active_to');
+            $table->date('active_from');
+            $table->date('active_to');
             $table->decimal('price', 5, 2);
         });
     }
