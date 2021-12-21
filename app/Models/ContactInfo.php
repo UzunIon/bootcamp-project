@@ -10,6 +10,7 @@ class ContactInfo extends Model
     use HasFactory;
 
     protected $fillable = [
+        'customer_id',
         'phone_number',
         'email',
         'gender',
@@ -19,6 +20,6 @@ class ContactInfo extends Model
 
     public function customer()
     {
-        return $this->belongsTo('Customer');
+        return $this->belongsTo(Customer::class);
     }
 }

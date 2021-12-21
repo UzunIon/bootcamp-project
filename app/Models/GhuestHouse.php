@@ -17,8 +17,8 @@ class GuestHouse extends Model
 
     public $timestamps = false;
 
-    public function tour()
+    public function tours()
     {
-        return $this->belongsTo('Tour');
+        return $this->hasMany(Tour::class);
     }
 }

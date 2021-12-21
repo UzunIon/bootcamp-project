@@ -18,6 +18,6 @@ class Restaurant extends Model
 
     public function activities()
     {
-        return $this->hasMany('Activity');
+        return $this->hasMany(Activity::class);
     }
 }

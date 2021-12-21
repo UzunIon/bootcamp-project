@@ -17,20 +17,24 @@ class Tour extends Model
         'sport_activity_id',
     ];
 
-    public function guesthouses()
+    public function guestHouse()
     {
-        return $this->hasMany('GuestHouse');
+        return $this->belongsTo(GuestHouse::class);
     }
-    public function locations()
+    public function location()
     {
-        return $this->hasMany('Location');
+        return $this->belongsTo(Location::class);
     }
-    public function sportactivities()
+    public function sportActivity()
     {
-        return $this->hasMany('SportActivity');
+        return $this->belongsTo(SportActivity::class);
+    }
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
     }
     public function activities()
     {
-        return $this->belongsToMany('Activity');
+        return $this->belongsToMany(Activity::class);
     }
 }

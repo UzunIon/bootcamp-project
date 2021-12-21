@@ -17,11 +17,10 @@ class Order extends Model
 
     public function customer()
     {
-        return $this->belongsTo('Customer');
+        return $this->belongsTo(Customer::class);
     }
-
-    public function tours()
+    public function tour()
     {
-        return $this->hasMany('Tour');
+        return $this->belongsTo(Tour::class);
     }
 }

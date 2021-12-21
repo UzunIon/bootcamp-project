@@ -11,7 +11,7 @@ class Activity extends Model
 
     protected $fillable = [
         'restaurant_id',
-        'activity_type',
+        'type',
         'description',
         'price',
         'duration',
@@ -19,10 +19,10 @@ class Activity extends Model
 
     public function restaurant()
     {
-        return $this->belongsTo('Restaurant');
+        return $this->belongsTo(Restaurant::class);
     }
     public function tours()
     {
-        return $this->belongsToMany('Tour');
+        return $this->belongsToMany(Tour::class);
     }
 }

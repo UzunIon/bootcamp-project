@@ -17,8 +17,8 @@ class SportActivity extends Model
         'price',
     ];
 
-    public function tour()
+    public function tours()
     {
-        return $this->belongsTo('Tour');
+        return $this->hasMany(Tour::class);
     }
 }

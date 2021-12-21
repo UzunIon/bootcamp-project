@@ -14,8 +14,12 @@ class Customer extends Model
         'surname',
     ];
 
-    public function contactinfo()
+    public function contactInfo()
     {
-        return $this->hasOne('ContactInfo');
+        return $this->hasOne(ContactInfo::class);
+    }
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
     }
 }
