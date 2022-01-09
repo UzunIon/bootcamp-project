@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Article extends Model
 {
@@ -21,6 +22,10 @@ class Article extends Model
         'seo_description',
     ];
 
+    public function getImageUrlAttribute(){
+        return Storage::url($this->image);
+    }
+
     public function category()
     {
         return $this->belongsTo(BlogCategory::class, 'category_id');
@@ -35,7 +40,7 @@ class Article extends Model
         return $this->hasMany(Comment::class);
     }
 
-    public function user(){
+    public function author(){
         return $this->belongsTo(User::class, 'author_id');
     }
 }

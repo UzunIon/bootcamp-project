@@ -20,4 +20,5 @@ class BlogCategory extends Model
     {
         return $this->hasMany(Article::class);
     }
+    
 }

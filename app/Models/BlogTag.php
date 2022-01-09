@@ -17,5 +17,4 @@ class BlogTag extends Model
     {
         return $this->belongsToMany(Article::class);
     }
-
 }
