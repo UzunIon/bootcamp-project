@@ -25,3 +25,4 @@ Route::get('/tourism', [TourismController::class, 'index'])->name('tourism');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/blog/article/{articleId}', [ArticleController::class, 'show'])->name('article');
 Route::get('/contact-us', [ContactUsController::class, 'index'])->name('contact-us');
+
