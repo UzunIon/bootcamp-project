@@ -22,36 +22,36 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="email">Email</label>
-                        <input type="email" required="required" class="form-control" name="email" id="email" placeholder="example@example.com">
+                        <input type="email" value="{{ old('email') }}" required="required" class="form-control" name="email" id="email" placeholder="example@example.com">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="name">Full Name</label>
-                        <input type="text" required="required" class="form-control" name="name" id="name" placeholder="John Doe">
+                        <input type="text" value="{{ old('name') }}" required="required" class="form-control" name="name" id="name" placeholder="John Doe">
                         @error('name')
                         <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="form-group col-md-6">
                         <label for="phone">Phone Number</label>
-                        <input type="phone" required="required" class="form-control" name="phone" id="phone" placeholder="060111222">
+                        <input type="phone" value="{{ old('phone') }}" required="required" class="form-control" name="phone" id="phone" placeholder="060111222">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputState">Which of our services are you interested in? </label>
                         <select id="services" class="form-control" name="services[]" multiple>
-                            <option value="tours" >Tours</option>
-                            <option value="attraction" >Tourism attraction</option>
-                            <option value="accommodation" >Tourism accommodation</option>
-                            <option value="activities" >Tourism activities</option>
+                            <option  @if(in_array('tours', old('services', []))) selected @endif value="tours" >Tours</option>
+                            <option  @if(in_array('attraction', old('services', []))) selected @endif value="attraction" >Tourism attraction</option>
+                            <option  @if(in_array('accommodation', old('services', []))) selected @endif value="accommodation" >Tourism accommodation</option>
+                            <option  @if(in_array('activities', old('services', []))) selected @endif value="activities" >Tourism activities</option>
                         </select>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="name">Message</label>
-                        <textarea class="form-control" name="message" id="message" placeholder="Write a message" cols="30" rows="10"></textarea>
+                        <textarea class="form-control" name="message" id="message" placeholder="Write a message" cols="30" rows="10">{{old('message')}}</textarea>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="form-check">
-                        <input class="form-check-input" name="readTerms" type="checkbox" id="gridCheck" value="1">
+                        <input class="form-check-input" name="readTerms" @if(old('readTerms')) checked @endif type="checkbox" id="gridCheck" value="1">
                         <label class="form-check-label" for="gridCheck">
                             I read the rules
                         </label>
