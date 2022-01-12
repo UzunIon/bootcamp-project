@@ -2,7 +2,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\RedirectResponse;
 use App\Http\Requests\ContactUsRequest;
-use Illuminate\Mail\Message;
+use App\Services\ContactUsMailer;
 
 class ContactUsController extends Controller
 {
@@ -10,7 +10,7 @@ class ContactUsController extends Controller
     {
         return view('contacts.contactUs');
     }
-    public function send(ContactUsRequest $request): RedirectResponse
+    public function send(ContactUsRequest $request, ContactUsMailer $mailer): RedirectResponse
     {
         $callback = function (string $test): string{
             return "{$test} input";
@@ -18,21 +18,7 @@ class ContactUsController extends Controller
 
         $data = $request->validated();
         \Log::debug($callback('test'), $data);
-        \Mail::send(
-            'emails.contactUs', 
-            [
-                'email' => $data['email'],
-                'name' => $data['name'],
-                'phone' => $data['phone'],
-                'services' => $data['services'],
-                'messageText' => $data['message'],
-            ],
-            function(Message $message) use ($data){
-                $message->subject('Message from customer ' . $data['email']);
-                $message->to('tech@baloon.com');
-                $message->from('no-replay@baloon.app', 'Baloon mailer');
-            }
-        );
+        $mailer->send($data);
 
         return redirect()->route('contactUs')->withInput($data);
     }
