@@ -12,12 +12,8 @@ class ContactUsController extends Controller
     }
     public function send(ContactUsRequest $request): RedirectResponse
     {
-        $callback = function (string $test): string{
-            return "{$test} input";
-        };
-
         $data = $request->validated();
-        \Log::debug($callback('test'), $data);
+        \Log::debug('test', $data);
         \Mail::send(
             'emails.contactUs', 
             [
@@ -28,9 +24,9 @@ class ContactUsController extends Controller
                 'messageText' => $data['message'],
             ],
             function(Message $message) use ($data){
-                $message->subject('Message from customer ' . $data['email']);
-                $message->to('tech@baloon.com');
-                $message->from('no-replay@baloon.app', 'Baloon mailer');
+                $message->subject('Message from ' . $data['email']);
+                $message->to('orheiulvechi@reserve.com');
+                $message->from('no-replay@reserve.app', 'Orhei mailer');
             }
         );
 
