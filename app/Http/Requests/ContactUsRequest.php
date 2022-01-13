@@ -14,9 +14,9 @@ class ContactUsRequest extends FormRequest
     {
         return [
             'email' => [ 'required', 'string', 'email'],
-            'name' => [ 'required', 'min:2', 'string' ],
-            'phone' => [ 'required', 'min:8', 'integer' ],
-            'services' => ['required', 'array', 'min:1', 'in:tours,attraction,accommodation,activities'],
+            'name' => [ 'required', 'string', 'min:2' ],
+            'phone' => [ 'required', 'numeric', 'min:8' ],
+            'services' => ['required', 'array', 'min:1', 'in:Tours,Attraction,Accommodation,Activities'],
             'message' => ['required', 'string', 'min:10'],
             'readTerms' => ['required'],
         ];

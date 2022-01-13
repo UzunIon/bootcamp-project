@@ -28,12 +28,12 @@ class ContactUsMailer
                 'messageText' => $data['message'],
             ],
             function(Message $message) use ($data){
-                $message->subject('Message from customer ' . $data['email']);
-                $message->to('tech@baloon.com');
-                $message->from('no-replay@baloon.app', 'Baloon mailer');
+                $message->subject('Message from ' . $data['email']);
+                $message->to('orheiulvechi@reserve.com');
+                $message->from('no-replay@reserve.app', 'Orhei mailer');
             }
         );
-        $this->logger->info('Contact us mail send to tech@baloon.com');
+        $this->logger->info('Contact us mail send to orheiulvechi@reserve.com');
     }
 
 }
