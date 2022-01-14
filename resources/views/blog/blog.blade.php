@@ -62,7 +62,7 @@
                         <div class="article__footer">
                             <address class="article__author"><a rel="author" href="#">{{ $article->author->name }}</a>
                             </address>
-                            <a href="{{route('article',['articleId' => $article->id])}}" class="article__comments"> <span class="article__comments-counter">{{ $article->comments()->count() }}</span> Comments</a>
+                            <a href="{{route('article',['articleId' => $article->id])}}" class="article__comments"><i class="far fa-comment-dots"></i> <span class="article__comments-counter">{{ $article->comments()->count() }}</span></a>
                         </div>
                     </article>
                 </div>

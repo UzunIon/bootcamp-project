@@ -1,37 +1,27 @@
  <!-- footer -->
-
- <div class="container">
     <footer class="row row-cols-4 py-5 my-5 border-top">
-        <div
-            class="d-flex justify-content-between py-4 my-4 border-top"
-        >
-            <!-- <img src="/resources/images/orhei-logo-white1.jpg" alt=""> -->
-            <p>&copy; 2021 Company, Inc. All rights reserved.</p>
-            <ul class="list-unstyled d-flex">
-                <li class="ms-3">
-                    <a class="link-dark" href="#"
-                        ><svg class="bi" width="24" height="24">
-                            <use xlink:href="#twitter" />
-                        </svg>
-                    </a>
+        <div class="col">
+            <ul class="list-unstyled flex-column align-content-between h-100">
+                <li class="">
+                    <img width="210"  src="/assets/images/logo-with-name.png" alt="">
                 </li>
-                <li class="ms-3">
-                    <a class="link-dark" href="#"
-                        ><svg class="bi" width="24" height="24">
-                            <use xlink:href="#instagram" />
-                        </svg>
-                    </a>
+                <li class="d-flex justify-content-center ">
+                    <p class="mb-3 mt-3">&copy; 2021. All rights reserved.</p>
                 </li>
-                <li class="ms-3">
-                    <a class="link-dark" href="#"
-                        ><svg class="bi" width="24" height="24">
-                            <use xlink:href="#facebook" />
-                        </svg>
-                </a>
+                <li class="d-flex justify-content-evenly align-self-start">
+                    <a class="link-dark" href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="link-dark" href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="link-dark" href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
                 </li>
             </ul>
         </div>
-        <div class="col">
+        <div class="col w-20">
             <h5>Tourism</h5>
             <ul class="nav flex-column">
                 <li class="nav-item mb-2">
@@ -62,7 +52,7 @@
             </ul>
         </div>
 
-        <div class="col">
+        <div class="col w-20">
             <h5>Natural Patrimonium</h5>
             <ul class="nav flex-column">
                 <li class="nav-item m">
@@ -88,7 +78,7 @@
             </ul>
         </div>
 
-        <div class="col">
+        <div class="col w-20">
             <h5>Cultural Heritage</h5>
             <ul class="nav flex-column">
                 <li class="nav-item mb-2">
@@ -114,4 +104,3 @@
             </ul>
         </div>
     </footer>
-</div>
