@@ -1,7 +1,6 @@
 @extends('layout')
 @section('content')
     <main class="main">
-        <div class="container">
             <header class="tourism__header">
                 <h3 class="tourism__title">Tourism Orhei</h3>
                 <ul class="tourism__list">
@@ -66,27 +65,27 @@
                 <h4 class="section-title tourism__accommodation-title">Tourism accommodation</h4>
                 <div class="tourism__accommodation-outer">
                     <a href="#" class="tourism__accommodation-item">
-                        <img src="./images/eco-resort-butuceni.jpg" alt="" class="tourism__accommodation-item__img">
+                        <img src="/assets/images/eco-resort-butuceni.jpg" alt="" class="tourism__accommodation-item__img">
                         <br class="tourism__accommodation-item__title">Eco Resort</br> Butuceni</h6>
                     </a>
                     <a href="#" class="tourism__accommodation-item">
-                        <img src="./images/valea-stincii-2.jpg" alt="" class="tourism__accommodation-item__img">
+                        <img src="/assets/images/valea-stincii-2.jpg" alt="" class="tourism__accommodation-item__img">
                         <h6 class="tourism__accommodation-item__title">VALEA STÂNCII</h6>
                     </a>
                     <a href="#" class="tourism__accommodation-item">
-                        <img src="./images/casa-din-lunca-scaled.jpg" alt="" class="tourism__accommodation-item__img">
+                        <img src="/assets/images/casa-din-lunca-scaled.jpg" alt="" class="tourism__accommodation-item__img">
                         <h6 class="tourism__accommodation-item__title">Casa din Luncă</h6>
                     </a>
                     <a href="#" class="tourism__accommodation-item">
-                        <img src="./images/vila-roz.jpg" alt="" class="tourism__accommodation-item__img">
+                        <img src="/assets/images/vila-roz.jpg" alt="" class="tourism__accommodation-item__img">
                         <h6 class="tourism__accommodation-item__title">Vila Roz</h6>
                     </a>
                     <a href="#" class="tourism__accommodation-item">
-                        <img src="./images/casa-verde--scaled.jpg" alt="" class="tourism__accommodation-item__img">
+                        <img src="/assets/images/casa-verde--scaled.jpg" alt="" class="tourism__accommodation-item__img">
                         <h6 class="tourism__accommodation-item__title">Casa Verde</h6>
                     </a>
                     <a href="#" class="tourism__accommodation-item">
-                        <img src="./images/casa-de-sub-stanca-scaled.jpg" alt="" class="tourism__accommodation-item__img">
+                        <img src="/assets/images/casa-de-sub-stanca-scaled.jpg" alt="" class="tourism__accommodation-item__img">
                         <h6 class="tourism__accommodation-item__title">Casa de sub Stâncă</h6>
                     </a>
                 </div>
@@ -96,15 +95,15 @@
                 <h4 class="section-title tourism__activities-title">Tourism activities</h4>
                 <div class="tourism__activities-outer">
                     <a href="#" class="tourism__activities-item">
-                        <img src="" alt="" class="tourism__activities-item__img">
+                        <img src="/assets/images/rafting.jpg" alt="" class="tourism__activities-item__img">
                         <h6 class="tourism__activities-item__title">Sport activities</h6>
                     </a>
                     <a href="#"  class="tourism__activities-item">
-                        <img src="" alt="" class="tourism__activities-item__img">
+                        <img src="/assets/images/camping.jpg" alt="" class="tourism__activities-item__img">
                         <h6 class="tourism__activities-item__title">Nature activities</h6>
                     </a>
                     <a href="#"  class="tourism__activities-item">
-                        <img src="" alt="" class="tourism__activities-item__img">
+                        <img src="/assets/images/descOPERA.jpg" alt="" class="tourism__activities-item__img">
                         <h6 class="tourism__activities-item__title">Cultural-historical events</h6>
                     </a>
                 </div>
@@ -133,6 +132,5 @@
                     <p class="tourism__rules-item__subtitle">Carving on trees, rocks or cave walls is forbidden</p>
                 </div>
             </section>
-        </div>
     </main>
 @endsection
