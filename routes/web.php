@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/about-us', [AboutUsController::class, 'index'])->name('about-us');
+Route::get('/about-us', [AboutUsController::class, 'index'])->name('aboutUs');
 Route::get('/tourism', [TourismController::class, 'index'])->name('tourism');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/blog/article/{articleId}', [ArticleController::class, 'show'])->name('article');

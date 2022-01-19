@@ -28,10 +28,6 @@
                 width="266"
                 height="66"
             />
-            {{-- <h1 class="header__title fs-6">
-                The Orheiul Vechi <br />
-                Cultural-Natural Reserve
-            </h1> --}}
         </a>
 
         <nav class="header__nav">
@@ -45,7 +41,7 @@
                     >
                 </li>
                 <li class="header__nav-item nav-item">
-                    <a href="{{route('about-us')}}" class="header__nav-link nav-link link-dark"
+                    <a href="{{route('aboutUs')}}" class="header__nav-link nav-link link-dark"
                         >About us</a
                     >
                 </li>
