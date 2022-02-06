@@ -6,6 +6,7 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\TourismController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +27,4 @@ Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/blog/article/{articleId}', [ArticleController::class, 'show'])->name('article');
 Route::get('/contacts', [ContactUsController::class, 'index'])->name('contactUs');
 Route::post('/contactUs', [ContactUsController::class, 'send'])->name('contactUs.send');
+Route::get('/cart', [CartController::class, 'index'])->name('cart');
