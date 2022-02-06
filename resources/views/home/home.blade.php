@@ -72,6 +72,29 @@
                     </div>
                 </div>
             </section>
+
+            <section class="main__about">
+                <p class="main__about_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil rem cupiditate eaque magnam assumenda sit maxime dolore! Atque modi totam assumenda beatae, quae ipsum molestias libero repellendus accusamus explicabo aspernatur similique doloribus itaque obcaecati necessitatibus harum quidem neque.</p>
+                <span class="main__about_title">Adventure</span>
+            </section>
+
+            <section class="main__tourism">
+                <div class="tourism_item">
+                    <h4 class="tourism__title">Lorem, ipsum.</h4>
+                    <p class="tourism__text">Lorem ipsum dolor sit amet.</p>
+                    <button class="tourism_btn">Explore</button>
+                </div>
+                <div class="tourism_item">
+                    <h4 class="tourism__title">Lorem, ipsum.</h4>
+                    <p class="tourism__text">Lorem ipsum dolor sit amet.</p>
+                    <button class="tourism_btn">Explore</button>
+                </div>
+                <div class="tourism_item">
+                    <h4 class="tourism__title">Lorem, ipsum.</h4>
+                    <p class="tourism__text">Lorem ipsum dolor sit amet.</p>
+                    <button class="tourism_btn">Explore</button>
+                </div>
+            </section>
         </div>
     </main>
     <!-- /HOME -->

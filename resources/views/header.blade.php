@@ -28,30 +28,34 @@
                 width="266"
                 height="66"
             />
+            {{-- <h1 class="header__title fs-6">
+                The Orheiul Vechi <br />
+                Cultural-Natural Reserve
+            </h1> --}}
         </a>
 
         <nav class="header__nav">
             <ul class="header__nav-list nav nav-pills">
                 <li class="header__nav-item nav-item">
                     <a
-                        href="{{route('home')}}"
+                        href="{{ route('home') }}"
                         class="nav-link link-dark"
                         aria-current="page"
                         >Home</a
                     >
                 </li>
                 <li class="header__nav-item nav-item">
-                    <a href="{{route('aboutUs')}}" class="header__nav-link nav-link link-dark"
+                    <a href="{{ route('aboutUs') }}" class="header__nav-link nav-link link-dark"
                         >About us</a
                     >
                 </li>
                 <li class="header__nav-item nav-item">
-                    <a href="{{route('tourism')}}" class="header__nav-link nav-link link-dark"
+                    <a href="{{ route('tourism') }}" class="header__nav-link nav-link link-dark"
                         >Tourism</a
                     >
                 </li>
                 <li class="header__nav-item">
-                    <a href="{{route('blog')}}" class="header__nav-link nav-link link-dark"
+                    <a href="{{ route('blog') }}" class="header__nav-link nav-link link-dark"
                         >Events</a
                     >
                 </li>
@@ -66,12 +70,12 @@
                     >
                 </li> --}}
                 <li class="header__nav-item">
-                    <a href="{{route('contactUs')}}" class="header__nav-link nav-link link-dark"
+                    <a href="{{ route('contactUs') }}" class="header__nav-link nav-link link-dark"
                         >Contact us</a
                     >
                 </li>
                 <li class="header__nav-item">
-                    <a href="#" class="header__nav-link nav-link link-dark">
+                    <a href="{{ route('cart') }}" class="header__nav-link nav-link link-dark">
                         <i class="fas fa-shopping-cart"></i>
                         {{-- <i class="fas fa-shopping-bag"></i> --}}
                     </a>
