@@ -23,6 +23,7 @@ class Article extends Model implements LoggableInterface
         'seo_title',
         'seo_description',
     ];
+    protected $dates = ['published_at'];
 
     public function getImageUrlAttribute(){
         return Storage::url($this->image);
