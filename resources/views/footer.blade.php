@@ -5,19 +5,20 @@
                 <li class="">
                     <img width="210"  src="/assets/images/logo-with-name.png" alt="">
                 </li>
-                <li class="d-flex justify-content-center ">
-                    <p class="mb-3 mt-3">&copy; 2021. All rights reserved.</p>
-                </li>
-                <li class="d-flex justify-content-evenly align-self-start">
-                    <a class="link-dark" href="#">
+                <li class="d-flex justify-content-evenly align-self-start mb-3 mt-3">
+                    <a class="" href="#">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a class="link-dark" href="#">
+                    <a class="" href="#">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a class="link-dark" href="#">
+                    <a class="" href="#">
                         <i class="fab fa-facebook"></i>
                     </a>
+                </li>
+                <li class="d-flex justify-content-center ">
+                    <p>&copy; 2021. All rights reserved.</p>
+                    Working hours
                 </li>
             </ul>
         </div>

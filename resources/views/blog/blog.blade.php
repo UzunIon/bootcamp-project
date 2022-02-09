@@ -34,8 +34,10 @@
                     </div>
                     <div class="col">
                         <select class="form-select" name="sort">
-                            <option value="DESC" @if($filter['sort'] === 'DESC') selected @endif>DESC</option>
-                            <option value="ASC" @if($filter['sort'] === 'ASC') selected @endif>ASC</option>
+                            <option value="DESC" @if($filter['sort'] === 'DESC') selected @endif>Newest to older</option>
+                            <option value="ASC" @if($filter['sort'] === 'ASC') selected @endif>Older to newest</option>
+                            <option value="DESC" @if($filter['sort'] === 'DESC') selected @endif>Most commented</option>
+                            <option value="ASC" @if($filter['sort'] === 'ASC') selected @endif>Most viewed</option>
                         </select>
                     </div>
                     <div class="col">
@@ -52,7 +54,7 @@
                 <div class="article__content">
                     <div class="article__header">
                         <span class="article__header-tag">{{ $article->category->name }}</span>
-                        <time class="article__header-date" datetime="2030-12-1 19:00">{{date('d'.' '.'M'.', '.'y', strtotime($article->published_at))}}</time>
+                        <time class="article__header-date" datetime="2030-12-1 19:00">{{$article->published_at->format('j F, Y')}}</time>
                     </div>
                     <article class="article__text">
                         <a class="article__link" href="{{route('article',['articleId' => $article->id])}}">
@@ -75,8 +77,6 @@
             <div class="row">
                 {{ $articles->links() }}
             </div>
-            
-            <button class="events__main-btn">See more posts</button>
         </section>
     </main>
 </div>

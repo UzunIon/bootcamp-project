@@ -7,12 +7,12 @@
         <img src="{{ $article->image_url }}" alt="{{ $article->title }}" class="article__card-img">
     </a>
     <div class="article-card__content">
-        <div class="aricle__card-tags">
-            <span class="card-tags__item">Music</span>
-            <span class="card-tags__item">Opera</span>
-            <span class="card-tags__item">Nature</span>
-        </div>
-        <time class="article__content-date" >{{date('d'.' '.'M'.', '.'y', strtotime($article->published_at))}}</time>
+        {{-- <div class="aricle__card-tags">
+            <span class="card-tags__item">{{ $article->category->name }}</span>
+            <span class="card-tags__item">{{ $article->category->name }}</span>
+            <span class="card-tags__item">{{ $article->category->name }}</span>
+        </div> --}}
+        <time class="article__content-date" >{{$article->published_at->format('j F, Y')}}</time>
         <a href="{{route('article',['articleId' => $article->id])}}" class="article__content-link">
             <h4 class="article__content-title">{{ $article->title }}</h4>
             <p class="article__content-text">{{ $article->excerpt }}</p>

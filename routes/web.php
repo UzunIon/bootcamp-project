@@ -7,6 +7,7 @@ use App\Http\Controllers\TourismController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +27,7 @@ Route::get('/tourism', [TourismController::class, 'index'])->name('tourism');
 Route::get('/tourism/service/{locationId}', [ServiceController::class, 'show'])->name('service');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/blog/article/{articleId}', [ArticleController::class, 'show'])->name('article');
+Route::get('/cart', [CartController::class, 'index'])->name('cart');
 Route::get('/contacts', [ContactUsController::class, 'index'])->name('contactUs');
 Route::post('/contactUs', [ContactUsController::class, 'send'])->name('contactUs.send')
     ->middleware('log.activity:sendContactUs');
