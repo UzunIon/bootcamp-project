@@ -139,12 +139,16 @@
     /* flex-basis: 1; */
     justify-content: center;
     align-items: flex-end;
-    min-width: 150px;
-    min-height: 200px;
+    width: 150px;
+    height: 200px;
     text-transform: uppercase;
     text-decoration: none;
     border: 1px black solid;
     transition: transform .3s linear;
+}
+.tourism__activities .tourism__activities-item__img{
+    width: 100%;
+    height: 100%;
 }
 .tourism__rules{
     display: flex;
