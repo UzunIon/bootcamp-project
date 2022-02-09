@@ -5,8 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
+use Psr\Log\LoggerInterface;
+use App\Models\LoggableInterface;
 
-class Article extends Model
+class Article extends Model implements LoggableInterface
 {
     use HasFactory;
 
@@ -42,5 +44,20 @@ class Article extends Model
 
     public function author(){
         return $this->belongsTo(User::class, 'author_id');
+    }
+
+    public function convertToLoggableString(): string
+    {
+        return "Article with id {@this->id}";
+    }
+
+
+    public function getData(): array
+    {
+        return 
+        [
+            'id' => $this->id,
+            'title' => $this->title,
+        ];
     }
 }

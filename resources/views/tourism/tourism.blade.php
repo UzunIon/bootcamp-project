@@ -1,6 +1,7 @@
 @extends('layout')
 @section('content')
     <main class="main">
+        <div class="container">
             <header class="tourism__header">
                 <h3 class="tourism__title">Tourism Orhei</h3>
                 <ul class="tourism__list">
@@ -28,35 +29,37 @@
             <section class="section tourism__attraction">
                 <h4 class="section-title tourism__attraction-title">Tourism attraction</h4>
                 <div class="tourism__content-outer">
+                    @foreach ( $locations as $location )
+                    @endforeach
                     <div class="tourism__content-item">
                         <h6 class="tourism__content-title">Schitul Rupestru Pestera</h6>
                         <p class="tourism__content-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quidem repellendus aspernatur, delectus officia rem? </p>
-                        <a href="#" class="tourism__content-link">Explore</a>
+                        <a href="{{ route('service', ['locationId' => $location->id]) }}" class="tourism__content-link">Explore</a>
                     </div>
                     <div class="tourism__content-item">
                         <h6 class="tourism__content-title">Muzeul "Casa țărănească din sec XIX"</h6>
                         <p class="tourism__content-text"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis corporis explicabo veniam! Maxime. </p>
-                        <a href="#" class="tourism__content-link">Explore</a>
+                        <a href="{{ route('service', ['locationId' => $location->id]) }}" class="tourism__content-link">Explore</a>
                     </div>
                     <div class="tourism__content-item">
                         <h6 class="tourism__content-title">Muzeul de arheologie și antropologie</h6>
                         <p class="tourism__content-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut fuga numquam sed esse quo architecto officia dolor! </p>
-                        <a href="#" class="tourism__content-link">Explore</a>
+                        <a href="{{ route('service', ['locationId' => $location->id]) }}" class="tourism__content-link">Explore</a>
                     </div>
                     <div class="tourism__content-item">
                         <h6 class="tourism__content-title">Baia Medievală Nr.2</h6>
                         <p class="tourism__content-text"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor facilis unde distinctio, quos libero corrupti esse accusamus recusandae. </p>
-                        <a href="#" class="tourism__content-link">Explore</a>
+                        <a href="{{ route('service', ['locationId' => $location->id]) }}" class="tourism__content-link">Explore</a>
                     </div>
                     <div class="tourism__content-item">
                         <h6 class="tourism__content-title">Palatul Pârcălabului</h6>
                         <p class="tourism__content-text"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, eius? Voluptas, earum. </p>
-                        <a href="#" class="tourism__content-link">Explore</a>
+                        <a href="{{ route('service', ['locationId' => $location->id]) }}" class="tourism__content-link">Explore</a>
                     </div>
                     <div class="tourism__content-item">
                         <h6 class="tourism__content-title">Mănăstirea Rupestră Bosie</h6>
                         <p class="tourism__content-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita vero praesentium esse dolor, tempora voluptatum debitis. </p>
-                        <a href="#" class="tourism__content-link">Explore</a>
+                        <a href="{{ route('service', ['locationId' => $location->id]) }}" class="tourism__content-link">Explore</a>
                     </div>
                 </div>
             </section>
@@ -65,27 +68,27 @@
                 <h4 class="section-title tourism__accommodation-title">Tourism accommodation</h4>
                 <div class="tourism__accommodation-outer">
                     <a href="#" class="tourism__accommodation-item">
-                        <img src="/assets/images/eco-resort-butuceni.jpg" alt="" class="tourism__accommodation-item__img">
+                        <img src="./images/eco-resort-butuceni.jpg" alt="" class="tourism__accommodation-item__img">
                         <br class="tourism__accommodation-item__title">Eco Resort</br> Butuceni</h6>
                     </a>
                     <a href="#" class="tourism__accommodation-item">
-                        <img src="/assets/images/valea-stincii-2.jpg" alt="" class="tourism__accommodation-item__img">
+                        <img src="./images/valea-stincii-2.jpg" alt="" class="tourism__accommodation-item__img">
                         <h6 class="tourism__accommodation-item__title">VALEA STÂNCII</h6>
                     </a>
                     <a href="#" class="tourism__accommodation-item">
-                        <img src="/assets/images/casa-din-lunca-scaled.jpg" alt="" class="tourism__accommodation-item__img">
+                        <img src="./images/casa-din-lunca-scaled.jpg" alt="" class="tourism__accommodation-item__img">
                         <h6 class="tourism__accommodation-item__title">Casa din Luncă</h6>
                     </a>
                     <a href="#" class="tourism__accommodation-item">
-                        <img src="/assets/images/vila-roz.jpg" alt="" class="tourism__accommodation-item__img">
+                        <img src="./images/vila-roz.jpg" alt="" class="tourism__accommodation-item__img">
                         <h6 class="tourism__accommodation-item__title">Vila Roz</h6>
                     </a>
                     <a href="#" class="tourism__accommodation-item">
-                        <img src="/assets/images/casa-verde--scaled.jpg" alt="" class="tourism__accommodation-item__img">
+                        <img src="./images/casa-verde--scaled.jpg" alt="" class="tourism__accommodation-item__img">
                         <h6 class="tourism__accommodation-item__title">Casa Verde</h6>
                     </a>
                     <a href="#" class="tourism__accommodation-item">
-                        <img src="/assets/images/casa-de-sub-stanca-scaled.jpg" alt="" class="tourism__accommodation-item__img">
+                        <img src="./images/casa-de-sub-stanca-scaled.jpg" alt="" class="tourism__accommodation-item__img">
                         <h6 class="tourism__accommodation-item__title">Casa de sub Stâncă</h6>
                     </a>
                 </div>
@@ -95,15 +98,15 @@
                 <h4 class="section-title tourism__activities-title">Tourism activities</h4>
                 <div class="tourism__activities-outer">
                     <a href="#" class="tourism__activities-item">
-                        <img src="/assets/images/rafting.jpg" alt="" class="tourism__activities-item__img">
+                        <img src="" alt="" class="tourism__activities-item__img">
                         <h6 class="tourism__activities-item__title">Sport activities</h6>
                     </a>
                     <a href="#"  class="tourism__activities-item">
-                        <img src="/assets/images/camping.jpg" alt="" class="tourism__activities-item__img">
+                        <img src="" alt="" class="tourism__activities-item__img">
                         <h6 class="tourism__activities-item__title">Nature activities</h6>
                     </a>
                     <a href="#"  class="tourism__activities-item">
-                        <img src="/assets/images/descOPERA.jpg" alt="" class="tourism__activities-item__img">
+                        <img src="" alt="" class="tourism__activities-item__img">
                         <h6 class="tourism__activities-item__title">Cultural-historical events</h6>
                     </a>
                 </div>
@@ -132,5 +135,6 @@
                     <p class="tourism__rules-item__subtitle">Carving on trees, rocks or cave walls is forbidden</p>
                 </div>
             </section>
+        </div>
     </main>
 @endsection
