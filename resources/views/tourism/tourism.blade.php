@@ -29,35 +29,37 @@
             <section class="section tourism__attraction">
                 <h4 class="section-title tourism__attraction-title">Tourism attraction</h4>
                 <div class="tourism__content-outer">
+                    @foreach ( $locations as $location )
+                    @endforeach
                     <div class="tourism__content-item">
                         <h6 class="tourism__content-title">Schitul Rupestru Pestera</h6>
                         <p class="tourism__content-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quidem repellendus aspernatur, delectus officia rem? </p>
-                        <a href="#" class="tourism__content-link">Explore</a>
+                        <a href="{{ route('service', ['locationId' => $location->id]) }}" class="tourism__content-link">Explore</a>
                     </div>
                     <div class="tourism__content-item">
                         <h6 class="tourism__content-title">Muzeul "Casa țărănească din sec XIX"</h6>
                         <p class="tourism__content-text"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis corporis explicabo veniam! Maxime. </p>
-                        <a href="#" class="tourism__content-link">Explore</a>
+                        <a href="{{ route('service', ['locationId' => $location->id]) }}" class="tourism__content-link">Explore</a>
                     </div>
                     <div class="tourism__content-item">
                         <h6 class="tourism__content-title">Muzeul de arheologie și antropologie</h6>
                         <p class="tourism__content-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut fuga numquam sed esse quo architecto officia dolor! </p>
-                        <a href="#" class="tourism__content-link">Explore</a>
+                        <a href="{{ route('service', ['locationId' => $location->id]) }}" class="tourism__content-link">Explore</a>
                     </div>
                     <div class="tourism__content-item">
                         <h6 class="tourism__content-title">Baia Medievală Nr.2</h6>
                         <p class="tourism__content-text"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor facilis unde distinctio, quos libero corrupti esse accusamus recusandae. </p>
-                        <a href="#" class="tourism__content-link">Explore</a>
+                        <a href="{{ route('service', ['locationId' => $location->id]) }}" class="tourism__content-link">Explore</a>
                     </div>
                     <div class="tourism__content-item">
                         <h6 class="tourism__content-title">Palatul Pârcălabului</h6>
                         <p class="tourism__content-text"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, eius? Voluptas, earum. </p>
-                        <a href="#" class="tourism__content-link">Explore</a>
+                        <a href="{{ route('service', ['locationId' => $location->id]) }}" class="tourism__content-link">Explore</a>
                     </div>
                     <div class="tourism__content-item">
                         <h6 class="tourism__content-title">Mănăstirea Rupestră Bosie</h6>
                         <p class="tourism__content-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita vero praesentium esse dolor, tempora voluptatum debitis. </p>
-                        <a href="#" class="tourism__content-link">Explore</a>
+                        <a href="{{ route('service', ['locationId' => $location->id]) }}" class="tourism__content-link">Explore</a>
                     </div>
                 </div>
             </section>
